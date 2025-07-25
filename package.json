@@ -48,14 +48,14 @@
     "README.md"
   ],
   "bin": {
-    "environment-detector": "./dist/cli/index.js"
+    "environment-detector": "dist/cli/index.js"
   },
   "scripts": {
     "build": "npm run clean && npm run build:types && npm run build:esm && npm run build:cjs && npm run build:cli",
     "build:types": "tsc --emitDeclarationOnly --declaration --declarationDir dist/types",
     "build:esm": "esbuild src/index.ts --bundle --platform=node --target=node16 --format=esm --outfile=dist/esm/index.js --sourcemap --external:child_process --external:fs --external:os --external:path --external:util --external:crypto",
     "build:cjs": "esbuild src/index.ts --bundle --platform=node --target=node16 --format=cjs --outfile=dist/cjs/index.js --sourcemap --external:child_process --external:fs --external:os --external:path --external:util --external:crypto",
-    "build:cli": "esbuild cli/index.ts --bundle --platform=node --target=node16 --format=cjs --outfile=dist/cli/index.js --sourcemap --banner:js='#!/usr/bin/env node\\n'",
+    "build:cli": "esbuild cli/index.ts --bundle --platform=node --target=node16 --format=cjs --outfile=dist/cli/index.js --sourcemap --banner:js=\"#!/usr/bin/env node\\n\" --external:child_process --external:fs --external:os --external:path --external:util --external:crypto",
     "clean": "rimraf dist",
     "test": "jest --coverage",
     "test:watch": "jest --watch",
