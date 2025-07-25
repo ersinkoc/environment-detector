@@ -1,0 +1,48 @@
+# Source files
+src/
+tests/
+benchmarks/
+examples/
+docs/
+cli/*.ts
+
+# Config files
+.eslintrc.json
+.prettierrc
+jest.config.js
+tsconfig.json
+tsconfig.build.json
+
+# Development files
+*.log
+*.tgz
+.vscode/
+.idea/
+.DS_Store
+
+# Test coverage
+coverage/
+.nyc_output/
+
+# Git files
+.git/
+.gitignore
+
+# CI files
+.github/
+.gitlab-ci.yml
+.travis.yml
+
+# Build files
+*.ts
+!*.d.ts
+
+# Temp files
+tmp/
+temp/
+*.tmp
+
+# Other
+TODO.md
+NOTES.md
+*.bak
